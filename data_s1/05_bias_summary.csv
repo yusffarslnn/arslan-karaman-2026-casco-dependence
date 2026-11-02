@@ -1,0 +1,63 @@
+quantity,value,ci_low,ci_high,note
+B1_count_sum_tau_at_true_tau_0,0.29447245936195243,,,mean over the four portfolio sizes (control_finding.mechanical_tau_at_zero)
+B2_count_average_tau_at_true_tau_0,0.07319055605360833,,,mean over the four portfolio sizes (control_finding.ratio_tau_at_zero)
+B3_block1_inflation_pct_ratio_of_mean_VaR,276.0052775205572,254.3194456419057,296.345723742926,"(mean leaky VaR / mean clean VaR - 1) x 100; percentile bootstrap 95% CI over replications (headline, Figure 1c)"
+B3_block1_n_rep_valid,30,,,
+B3_block1_per_rep_inflation_pct_mean,276.5237550340538,254.03833137712562,299.00917869098197,t-interval 95%
+B3_block1_per_rep_inflation_pct_median,299.1109713975793,,,
+B3_block1_per_rep_inflation_pct_sd,60.21707048562699,,,
+B3_block1_per_rep_inflation_pct_p2_5,161.74581190959216,,,
+B3_block1_per_rep_inflation_pct_p97_5,339.83836345180373,,,
+B3_block1_per_rep_inflation_pct_min,161.26552123648517,,,simulated replications (synthetic)
+B3_block1_per_rep_inflation_pct_max,344.7942448168054,,,simulated replications (synthetic)
+B3_block1_VaR_leaky_mean,108025.75515011889,,,simulated monetary units
+B3_block1_VaR_clean_mean,28729.850778281387,,,simulated monetary units
+B3_block2_inflation_pct_ratio_of_mean_VaR,270.9208480772693,249.70610132041438,290.01991088658167,(mean leaky VaR / mean clean VaR - 1) x 100; percentile bootstrap 95% CI over replications
+B3_block2_n_rep_valid,30,,,
+B3_block2_per_rep_inflation_pct_mean,270.63517902876174,248.75576966533453,292.51458839218895,t-interval 95%
+B3_block2_per_rep_inflation_pct_median,297.2252159380164,,,
+B3_block2_per_rep_inflation_pct_sd,58.59413440117381,,,
+B3_block2_per_rep_inflation_pct_p2_5,164.89476557186788,,,
+B3_block2_per_rep_inflation_pct_p97_5,325.76162102136493,,,
+B3_block2_per_rep_inflation_pct_min,159.5040144759788,,,simulated replications (synthetic)
+B3_block2_per_rep_inflation_pct_max,327.0405723940489,,,simulated replications (synthetic)
+B3_block2_VaR_leaky_mean,106724.31869661895,,,simulated monetary units
+B3_block2_VaR_clean_mean,28772.801326709578,,,simulated monetary units
+B3_block3_inflation_pct_ratio_of_mean_VaR,295.1511394643132,278.46910218193557,309.15523510980347,(mean leaky VaR / mean clean VaR - 1) x 100; percentile bootstrap 95% CI over replications
+B3_block3_n_rep_valid,30,,,
+B3_block3_per_rep_inflation_pct_mean,295.59466270312134,279.1528805461957,312.03644486004697,t-interval 95%
+B3_block3_per_rep_inflation_pct_median,307.2600772237629,,,
+B3_block3_per_rep_inflation_pct_sd,44.03190129565803,,,
+B3_block3_per_rep_inflation_pct_p2_5,171.13843573146025,,,
+B3_block3_per_rep_inflation_pct_p97_5,332.9488696033304,,,
+B3_block3_per_rep_inflation_pct_min,167.94952689643537,,,simulated replications (synthetic)
+B3_block3_per_rep_inflation_pct_max,343.8059151167061,,,simulated replications (synthetic)
+B3_block3_VaR_leaky_mean,113224.97145449575,,,simulated monetary units
+B3_block3_VaR_clean_mean,28653.58596915328,,,simulated monetary units
+B3_block4_inflation_pct_ratio_of_mean_VaR,284.93958126149954,266.31355771197246,301.12246944050753,(mean leaky VaR / mean clean VaR - 1) x 100; percentile bootstrap 95% CI over replications
+B3_block4_n_rep_valid,30,,,
+B3_block4_per_rep_inflation_pct_mean,285.0779662168729,265.9796697241712,304.1762627095746,t-interval 95%
+B3_block4_per_rep_inflation_pct_median,298.2273859734564,,,
+B3_block4_per_rep_inflation_pct_sd,51.14617734596573,,,
+B3_block4_per_rep_inflation_pct_p2_5,170.72617600662477,,,
+B3_block4_per_rep_inflation_pct_p97_5,336.2456868878078,,,
+B3_block4_per_rep_inflation_pct_min,166.52578527523823,,,simulated replications (synthetic)
+B3_block4_per_rep_inflation_pct_max,350.90445403395057,,,simulated replications (synthetic)
+B3_block4_VaR_leaky_mean,110622.09854749584,,,simulated monetary units
+B3_block4_VaR_clean_mean,28737.522440527457,,,simulated monetary units
+B3_pooled_blocks1to4_inflation_pct_ratio_of_mean_VaR,281.74148176890895,,,all 120 replications
+B3_block_inflation_pct_min,270.9208480772693,,,range across the four blocks
+B3_block_inflation_pct_max,295.1511394643132,,,range across the four blocks
+design_B1_B2_replications_n1000,100,,,
+design_B1_B2_replications_n5000,33,,,
+design_B1_B2_replications_n25000,20,,,
+design_B1_B2_replications_n100000,20,,,
+design_B1_B2_total_replications,692,,,
+design_B3_policies_per_replication,20000,,,
+design_B3_replications_per_block,30,,,
+design_B3_true_tau,0.0,,,B3 involves no injected dependence
+design_B3_bootstrap_B,10000,,,percentile bootstrap over replications
+design_frequency_poisson_lambda,0.35,,,stylized generator
+design_severity_meanlog,8.0,,,stylized generator (lognormal)
+design_severity_sdlog,1.0,,,stylized generator (lognormal)
+design_max_claims_per_policy,20,,,stylized generator

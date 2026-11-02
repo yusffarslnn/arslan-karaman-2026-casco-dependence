@@ -1,0 +1,14 @@
+# Pinned environment of the final clean end-to-end run (26 October 2026, Python 3.13.9),
+# as recorded in the module manifests and in pipeline_run_report.json.
+# The XGBoost pricing result (14b) is sensitive to the xgboost version at the third
+# decimal of the Gini index; keep the pinned version for an exact reproduction.
+# Module 14b runs LightGBM/XGBoost single-threaded with fixed seeds (deterministic).
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.16.3
+matplotlib==3.10.6
+pyarrow==21.0.0
+openpyxl==3.1.5
+statsmodels==0.14.5
+lightgbm==4.6.0
+xgboost==3.3.0

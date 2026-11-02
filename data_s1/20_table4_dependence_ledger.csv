@@ -1,0 +1,37 @@
+block,quantity,value,ci_low,ci_high,origin,used_for,source_manifest_key
+empirical_estimate,naive_B1_count_sum_tau_b,0.253777357861632,,,"policy-level construction (Table 2, row A)",reference only; never a model input,06_manifest: axis_tau.A_mechanical
+empirical_estimate,naive_B2_count_average_tau_b,0.0806720417098069,,,"policy-level construction (Table 2, row B)",reference only; never a model input,06_manifest: axis_tau.B_ratio
+empirical_estimate,tau_b_FS_claim_level,-0.006545983762776549,-0.00979589228422127,-0.0035097581182701497,claim-level data (Table 2); policy-cluster bootstrap 95% CI,calibration target of the capital simulator; equivalence test,"06_manifest: axis_tau.FS_freq_severity; axis_FS_bca_ci (policy-cluster percentile CI, see ci_method_primary)"
+empirical_estimate,tau_b_lag_claim_level,0.018548001521238994,0.015155091813770099,0.02205881039811709,claim-level data (Table 2); policy-cluster bootstrap 95% CI,reserving axis; not used in capital,06_manifest: axis_tau.lag_settlement; axis_lag_bca_ci
+fitted_copula_parameter,copula_FS_Gauss_theta,-0.017731568101988927,-0.019605751978741134,-0.009968004470726512,MPLE on jittered PITs (Table 3); policy-cluster bootstrap CI,family selection; not a capital input,11_manifest: axis_FS.best_theta; boot_ci_cluster
+fitted_copula_parameter,copula_lag_Joe_theta,1.0460817919561018,1.043642722175162,1.0504430442041348,MPLE on jittered PITs (Table 3); policy-cluster bootstrap CI,reserving axis; not a capital input,11_manifest: axis_lag.best_theta; boot_ci_cluster
+fitted_copula_parameter,copula_lag_Joe_lambda_U,0.060145838883682634,,,upper tail dependence of the fitted lag copula (Table 3),reserving axis; not a capital input,11_manifest: axis_lag.all_families.<best>.lambda_U
+capital_simulation_input,tau_lat_star,-0.01016304227942597,,,calibrated so that the simulated claim-level tau_b equals tau_b_FS_claim_level (tau_lat_star = tau_hat / c),main capital scenario,13_manifest: calibration.tau_lat_star
+capital_simulation_input,rho_star,-0.015963391412343358,,,sin(pi tau_lat_star / 2),main capital scenario,13_manifest: calibration.rho_star
+capital_simulation_input,calibration_slope_c,0.644096874026414,,,slope at the origin of the claim-level tau_b against tau_lat,calibration of tau_lat_star,13_manifest: calibration.c
+capital_simulation_input,calibration_target_tau_hat,-0.006545983762776549,,,observed claim-level FS tau_b,calibration target,13_manifest: calibration.tau_hat
+capital_simulation_input,empirical_rank_scenario_simulated_tau_b,-0.006952021316539059,,,"claim-level data (pooled mid-rank PITs), count classes 1/2/3/4+",copula-free capital sensitivity,13_manifest: margin_correction_validation.B_empirical_rank.tau_b_claim
+capital_simulation_input,sweep_tau_lat,-0.4,,,prescribed,materiality sweep (Figure 6b),13_manifest: tau_sweep.tau_lat_grid
+capital_simulation_input,sweep_simulated_claim_level_tau_b,-0.2747282404835149,,,simulated at sweep_tau_lat = -0.4,materiality sweep (x axis of Figure 6b),13_manifest: tau_sweep.rows.tau_b_claim_sim
+capital_simulation_input,sweep_tau_lat,-0.2,,,prescribed,materiality sweep (Figure 6b),13_manifest: tau_sweep.tau_lat_grid
+capital_simulation_input,sweep_simulated_claim_level_tau_b,-0.1306993229931639,,,simulated at sweep_tau_lat = -0.2,materiality sweep (x axis of Figure 6b),13_manifest: tau_sweep.rows.tau_b_claim_sim
+capital_simulation_input,sweep_tau_lat,-0.1,,,prescribed,materiality sweep (Figure 6b),13_manifest: tau_sweep.tau_lat_grid
+capital_simulation_input,sweep_simulated_claim_level_tau_b,-0.06485322786152277,,,simulated at sweep_tau_lat = -0.1,materiality sweep (x axis of Figure 6b),13_manifest: tau_sweep.rows.tau_b_claim_sim
+capital_simulation_input,sweep_tau_lat,-0.05,,,prescribed,materiality sweep (Figure 6b),13_manifest: tau_sweep.tau_lat_grid
+capital_simulation_input,sweep_simulated_claim_level_tau_b,-0.03267136770031481,,,simulated at sweep_tau_lat = -0.05,materiality sweep (x axis of Figure 6b),13_manifest: tau_sweep.rows.tau_b_claim_sim
+capital_simulation_input,sweep_tau_lat,0.05,,,prescribed,materiality sweep (Figure 6b),13_manifest: tau_sweep.tau_lat_grid
+capital_simulation_input,sweep_simulated_claim_level_tau_b,0.031292863565481485,,,simulated at sweep_tau_lat = 0.05,materiality sweep (x axis of Figure 6b),13_manifest: tau_sweep.rows.tau_b_claim_sim
+capital_simulation_input,sweep_tau_lat,0.1,,,prescribed,materiality sweep (Figure 6b),13_manifest: tau_sweep.tau_lat_grid
+capital_simulation_input,sweep_simulated_claim_level_tau_b,0.06350333407227164,,,simulated at sweep_tau_lat = 0.1,materiality sweep (x axis of Figure 6b),13_manifest: tau_sweep.rows.tau_b_claim_sim
+capital_simulation_input,sweep_tau_lat,0.2,,,prescribed,materiality sweep (Figure 6b),13_manifest: tau_sweep.tau_lat_grid
+capital_simulation_input,sweep_simulated_claim_level_tau_b,0.12946586403861193,,,simulated at sweep_tau_lat = 0.2,materiality sweep (x axis of Figure 6b),13_manifest: tau_sweep.rows.tau_b_claim_sim
+capital_simulation_input,sweep_tau_lat,0.4,,,prescribed,materiality sweep (Figure 6b),13_manifest: tau_sweep.tau_lat_grid
+capital_simulation_input,sweep_simulated_claim_level_tau_b,0.27393645785336673,,,simulated at sweep_tau_lat = 0.4,materiality sweep (x axis of Figure 6b),13_manifest: tau_sweep.rows.tau_b_claim_sim
+prescribed_simulation_value,artifact_experiment_true_tau,0.0,,,prescribed,common-latent-risk generator (Figure 1),05_manifest: params.TAU_TRUE_GRID
+prescribed_simulation_value,artifact_experiment_true_tau,0.05,,,prescribed,common-latent-risk generator (Figure 1),05_manifest: params.TAU_TRUE_GRID
+prescribed_simulation_value,artifact_experiment_true_tau,0.1,,,prescribed,common-latent-risk generator (Figure 1),05_manifest: params.TAU_TRUE_GRID
+prescribed_simulation_value,artifact_experiment_true_tau,0.2,,,prescribed,common-latent-risk generator (Figure 1),05_manifest: params.TAU_TRUE_GRID
+prescribed_simulation_value,positive_control_injected_tau,0.0,,,prescribed,latent-risk generator with fitted marginals (Figure 3),09_manifest: params.TAU_INJECT_GRID
+prescribed_simulation_value,positive_control_injected_tau,0.1,,,prescribed,latent-risk generator with fitted marginals (Figure 3),09_manifest: params.TAU_INJECT_GRID
+prescribed_simulation_value,positive_control_injected_tau,0.25,,,prescribed,latent-risk generator with fitted marginals (Figure 3),09_manifest: params.TAU_INJECT_GRID
+prescribed_simulation_value,positive_control_injected_tau,0.4,,,prescribed,latent-risk generator with fitted marginals (Figure 3),09_manifest: params.TAU_INJECT_GRID

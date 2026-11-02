@@ -1,0 +1,15 @@
+quantity,value,note
+severity_body_selected,LogNormal,AIC-selected body distribution
+severity_body_ks,0.048898053395876384,Kolmogorov-Smirnov distance of the body fit
+lognormal_shape_s,1.4623218844797612,scipy.stats.lognorm shape s (= sdlog); ML fit of module 10 as recorded in 09_manifest marginals
+lognormal_loc,0.0,scipy.stats.lognorm loc
+lognormal_scale,1463.451408390828,"scipy.stats.lognorm scale (= exp(meanlog)), real TRY"
+gpd_threshold_selection_rule,ks_min_over_grid,minimum KS distance over the quantile grid
+frequency_model_selected,NegativeBinomial,
+nb_size_r,1.1289973083518645,scipy.stats.nbinom n
+nb_prob_p,0.8116136648111577,scipy.stats.nbinom p
+variance_to_mean_ratio,1.2330697849247851,claim counts per policy
+aic_poisson,1070898.349796353,
+aic_negative_binomial,1055580.676674742,
+frequency_fit_method,mle,
+gpd_finite_moment_orders,1;2;3,moments of order k < 1/xi are finite

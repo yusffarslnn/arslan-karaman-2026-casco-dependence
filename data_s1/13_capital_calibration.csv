@@ -1,0 +1,44 @@
+quantity,tau_lat,value,note
+rho,-0.05,-0.07845909572784494,sin(pi tau_lat / 2)
+tau_b_claim,-0.05,-0.03267136770031481,"simulated claim-level Kendall tau-b(N, Y)"
+tau_b_se,-0.05,0.000820359620980074,standard error of the simulated tau-b
+tau_b_claim_analytic,-0.05,-0.03197019546082048,exact population claim-level tau-b
+ratio_sim,-0.05,0.6534273540062963,tau_b_claim / tau_lat
+n_claims,-0.05,1311081,claims in the calibration portfolio
+rho,-0.1,-0.15643446504023087,sin(pi tau_lat / 2)
+tau_b_claim,-0.1,-0.06485322786152277,"simulated claim-level Kendall tau-b(N, Y)"
+tau_b_se,-0.1,0.0007791314590296014,standard error of the simulated tau-b
+tau_b_claim_analytic,-0.1,-0.06415394088739958,exact population claim-level tau-b
+ratio_sim,-0.1,0.6485322786152277,tau_b_claim / tau_lat
+n_claims,-0.1,1311081,claims in the calibration portfolio
+rho,-0.2,-0.3090169943749474,sin(pi tau_lat / 2)
+tau_b_claim,-0.2,-0.1306993229931639,"simulated claim-level Kendall tau-b(N, Y)"
+tau_b_se,-0.2,0.0007119866927082227,standard error of the simulated tau-b
+tau_b_claim_analytic,-0.2,-0.13003066076426964,exact population claim-level tau-b
+ratio_sim,-0.2,0.6534966149658195,tau_b_claim / tau_lat
+n_claims,-0.2,1311081,claims in the calibration portfolio
+rho,-0.4,-0.5877852522924731,sin(pi tau_lat / 2)
+tau_b_claim,-0.4,-0.2747282404835149,"simulated claim-level Kendall tau-b(N, Y)"
+tau_b_se,-0.4,0.0006554460310847762,standard error of the simulated tau-b
+tau_b_claim_analytic,-0.4,-0.27419341676337766,exact population claim-level tau-b
+ratio_sim,-0.4,0.6868206012087872,tau_b_claim / tau_lat
+n_claims,-0.4,1311081,claims in the calibration portfolio
+n_pol_per_point,,5000000,policies per calibration portfolio
+c,,0.644096874026414,"slope at the origin, c1 in tau_claim = c1 tau_lat + c3 tau_lat^3"
+c3,,0.2665860831345851,cubic coefficient
+c_linear_through_origin,,0.6783531857092081,sensitivity: linear fit through the origin
+c_analytic_slope_at_0,,0.638694031895695,sensitivity: exact analytic slope at 0
+tau_hat,,-0.006545983762776549,calibration target = observed FS tau-b
+tau_lat_star,,-0.01016304227942597,calibrated latent Kendall tau = tau_hat / c
+rho_star,,-0.015963391412343358,"sin(pi tau_lat_star / 2), main capital scenario"
+tau_lat_star_analytic_root,,-0.010248539588519906,sensitivity: exact analytic root
+check_tau_b_claim_at_rho_star,,-0.00574544797346136,check: simulated claim-level tau-b at rho_star
+check_tau_b_se,,0.0007188795348634049,standard error of the check value
+check_n_pol,,10000000,policies in the check portfolio
+check_tau_b_claim_analytic_at_rho_star,,-0.00649136958115223,check: exact population claim-level tau-b at rho_star
+n_policies_capital_portfolio,,100000,synthetic portfolio size of the capital simulation
+claim_count_cap,,30,maximum simulated claims per policy
+n_paired_replications,,20000,"main scenario, four seed blocks"
+n_obs_above_VaR995,,100,main scenario
+paired_bootstrap_B,,1000,paired-replication percentile bootstrap (design_choices.bootstrap)
+gpd_tail_quantile_used,,0.925,splice threshold reused from module 10

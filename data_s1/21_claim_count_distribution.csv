@@ -1,0 +1,10 @@
+quantity,value,count,basis
+share_policies_N=0,0.7899825229698982,646829.0,policy-level N = distinct linked claim files per policy (analytical_dataset.n_claims; includes files with nonpositive cumulative payment)
+share_policies_N=1,0.1683547287518518,137847.0,policy-level N = distinct linked claim files per policy (analytical_dataset.n_claims; includes files with nonpositive cumulative payment)
+share_policies_N=2,0.03329062798840727,27258.0,policy-level N = distinct linked claim files per policy (analytical_dataset.n_claims; includes files with nonpositive cumulative payment)
+share_policies_N=3+,0.008372120289842683,6855.0,policy-level N = distinct linked claim files per policy (analytical_dataset.n_claims; includes files with nonpositive cumulative payment)
+n_policies,818789.0,,policy-level N = distinct linked claim files per policy (analytical_dataset.n_claims; includes files with nonpositive cumulative payment)
+total_linked_claim_files,214568.0,,policy-level N = distinct linked claim files per policy (analytical_dataset.n_claims; includes files with nonpositive cumulative payment)
+mean,0.2620553036252319,,policy-level N = distinct linked claim files per policy (analytical_dataset.n_claims; includes files with nonpositive cumulative payment)
+variance_ddof1,0.3231328715268681,,policy-level N = distinct linked claim files per policy (analytical_dataset.n_claims; includes files with nonpositive cumulative payment)
+vmr,1.2330712908943218,,policy-level N = distinct linked claim files per policy (analytical_dataset.n_claims; includes files with nonpositive cumulative payment)

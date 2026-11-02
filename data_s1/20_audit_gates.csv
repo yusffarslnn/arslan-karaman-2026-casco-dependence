@@ -1,0 +1,13 @@
+condition,passed,description
+test_n_positive,True,pricing test sets are non-empty
+leakage_off,True,no shared-uniform frequency-severity leakage in the capital simulator (module 13)
+tie_flagged,True,cross-fitted Vuong statistics carry a tie-reliability flag (module 07)
+marginals_consistent,True,fitted frequency marginal available to downstream modules (module 10)
+positive_control_passed,True,positive control met all prespecified recovery criteria (module 09)
+capital_uses_FS_axis,True,capital simulation is calibrated to the claim-level frequency-severity tau (modules 11 and 13 agree)
+gpd_threshold_reused_in_capital,True,selected GPD threshold quantile is reused in the capital splice (modules 10 and 13 agree)
+test_set_isolated,True,"fit, validation and test years of the pricing models are disjoint (module 14b)"
+mc_tail_sample_adequate,True,at least 50 Monte Carlo observations above the 99.5% quantile (module 13)
+scr_mc_ci_reported,True,Monte Carlo interval for the capital difference is reported (module 13)
+monetary_basis_consistent,True,premium comparisons use real (December-2018) prices (module 18)
+n_failed_conditions,0,number of conditions not met

@@ -1,0 +1,17 @@
+block,variable,level,label,price_basis,n,n_missing,mean,sd,p5,median,p95,count,share
+numeric,vehicle_age,,Vehicle age (years),,818789,0,3.32166406729939,2.9515931108322198,0.0,3.0,9.0,,
+numeric,insured_age,,Insured age (years),,818789,0,36.80546025899224,20.74205123590885,0.0,39.0,67.0,,
+numeric,horsepower,,Horsepower,,818789,0,114.995222212316,34.31975592316495,75.0,110.0,177.0,,
+numeric,engine_displacement,,Engine displacement (cc),,818789,0,1545.4072673179537,296.9720107590575,1198.0,1560.0,1995.0,,
+numeric,insured_vehicle_value,,"Insured vehicle value (TRY, nominal)","nominal TRY (policy-year prices), NOT deflated",818789,0,76655.82609683325,64593.2308686506,24240.0,60550.0,183439.0,,
+numeric,exposure,,Earned exposure (years),,818789,0,0.9904256285807455,0.04860430161053559,0.99,1.0,1.0,,
+sensitivity (not Table 1),insured_vehicle_value,real_Dec2018,"Insured vehicle value (TRY, Dec-2018 prices)",deflated with policy-year CPI of month 06 to 201812,818789,0,104825.64780354104,83461.94358811188,35425.194901579955,83662.18587953731,246145.65254461087,,
+categorical,gender,male,Gender: male,,818789,0,,,,,,484208.0,0.5913709148510788
+categorical,gender,female,Gender: female,,818789,0,,,,,,194368.0,0.2373847230483067
+categorical,gender,corporate,Gender: corporate,,818789,0,,,,,,140213.0,0.17124436210061444
+categorical,insured_age,insured_age==0,Insured age recorded as zero,,818789,0,,,,,,140115.0,0.17112467314534024
+categorical,insured_age,corporate & age==0,Corporate policyholders with age zero,,818789,0,,,,,,140090.0,0.17109414024858663
+categorical,insured_age,corporate & age>0,Corporate policyholders with age > 0,,818789,0,,,,,,123.0,0.0001502218520278118
+categorical,insured_age,non-corporate & age==0,Non-corporate policyholders with age zero,,818789,0,,,,,,25.0,3.0532896753620286e-05
+categorical,body_type,modal (HBA),Body type: modal category (HBA); share exceeds 0.9999 (exact count suppressed),,818789,0,,,,,,suppressed,suppressed
+categorical,body_type,non-modal (all),Body type: non-modal policies (fewer than 10 policies; suppressed),,818789,0,,,,,,suppressed,suppressed

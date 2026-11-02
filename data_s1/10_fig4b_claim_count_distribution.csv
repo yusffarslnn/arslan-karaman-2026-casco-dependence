@@ -1,0 +1,9 @@
+category,n_policies,observed_share,fit_model,fit_prob,poisson_ref_prob,plotted_in_figure
+0,646829,0.7899825229698982,Negative binomial fit,0.7900519706224135,0.7694684681350584,observed bar and model points
+1,137847,0.1683547287518518,Negative binomial fit,0.16803430914354373,0.20164329304717485,observed bar and model points
+2,27258,0.03329062798840727,Negative binomial fit,0.03369709629870289,0.026420847191734504,observed bar and model points
+3,5527,0.006750212814290372,Negative binomial fit,0.006621033899189032,0.0023079077109552817,observed bar and model points
+4,1068,0.0013043653493146586,Negative binomial fit,0.0012875372941414441,0.00015119986398335003,observed bar and model points
+5,219,0.0002674681755617137,Negative binomial fit,0.0002488122060403944,7.924545252850104e-06,observed bar and model points
+6,31,3.7860791974489156e-05,Negative binomial fit,4.7880564241071416e-05,3.461115187212542e-07,observed bar and model points
+>=7,10,1.2213158701448115e-05,Negative binomial fit,1.1359971727931564e-05,1.3394322050155032e-08,observed bar and model points

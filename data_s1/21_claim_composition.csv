@@ -1,0 +1,21 @@
+section,quantity,value,count,definition
+q_k,q_1,0.6426548069608882,137710.0,"share of the 214,283 severity claims on policies with N = 1"
+q_k,q_2,0.25391188288384986,54409.0,"share of the 214,283 severity claims on policies with N = 2"
+q_k,q_3,0.07722497818305699,16548.0,"share of the 214,283 severity claims on policies with N = 3"
+q_k,q_4,0.019903585445415643,4265.0,"share of the 214,283 severity claims on policies with N = 4"
+q_k,q_5,0.0051053980017080215,1094.0,"share of the 214,283 severity claims on policies with N = 5"
+q_k,q_6+,0.0011993485250813177,257.0,share of claims on policies with N >= 6 (top-coded for disclosure; sum of q_k^2 uses the full distribution)
+tie_bound,sum_qk2,0.48386320151236073,,sum_k q_k^2
+tie_bound,tau_a_bound_asymptotic,0.5161367984876393,,max tau-a under perfect monotone dependence given the count ties = 1 - sum q_k^2
+tie_bound,tau_b_bound_asymptotic,0.7184266131537996,,max tau-b (continuous severity) = sqrt(1 - sum q_k^2)
+tie_bound,tau_a_bound_exact_finite_n,0.5161392071677826,,"1 - sum t_k(t_k-1)/(n(n-1)), t_k = claims with N = k"
+tie_bound,tau_b_bound_exact_finite_n,0.7184282895096648,,sqrt of the exact tau-a bound
+multi_claim,share_claims_on_multiclaim_policies,0.35734519303911183,76573.0,claims (or real losses) on policies with N >= 2 / all severity claims
+multi_claim,share_real_loss_on_multiclaim_policies,0.30438653697370577,,claims (or real losses) on policies with N >= 2 / all severity claims
+multi_claim,mean_N_over_claims,1.4948596015549531,,claim-weighted mean policy count
+composition_effect,C1_severity_weighted_multiplicative,-0.017249799965752308,,"sum_i s_i[exp(b(k_i-1))-1] / sum_i s_i  (expected-loss shift, exact multiplicative; weights = observed real severities); b = beta_N = -0.0435834"
+composition_effect,C2_count_weighted_multiplicative,-0.02077871455279095,,(1/n) sum_i [exp(b(k_i-1))-1]  (average per-claim severity shift; each claim weighted equally); b = beta_N = -0.0435834
+composition_effect,C3_severity_weighted_loglinear,-0.017877089091919412,,"sum_i s_i b(k_i-1) / sum_i s_i  (first-order log approximation, severity-weighted); b = beta_N = -0.0435834"
+composition_effect,C4_count_weighted_loglinear,-0.021567652295347205,,(1/n) sum_i b(k_i-1); b = beta_N = -0.0435834
+composition_effect,C5_severity_weighted_pctlinear,-0.017493115627866006,,sum_i s_i (exp(b)-1)(k_i-1) / sum_i s_i  (-4.26% per extra claim applied additively); b = beta_N = -0.0435834
+composition_effect,C6_count_weighted_pctlinear,-0.02110441098571547,,(1/n) sum_i (exp(b)-1)(k_i-1); b = beta_N = -0.0435834

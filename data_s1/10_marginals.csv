@@ -1,0 +1,4 @@
+component,distribution,ks,xi,beta,variance_to_mean_ratio
+severity,LogNormal,0.048898053395876384,,,
+gpd_tail,GPD,,0.30841654422551806,10964.11369009331,
+frequency,NegativeBinomial,,,,1.2330697849247851

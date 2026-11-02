@@ -1,0 +1,23 @@
+distribution,parameter,value,note
+moment_matching,mean,689034.3369407654,"chain-ladder reserve (best estimate), real TRY"
+moment_matching,sd,541622.7388826004,"Mack total standard error, real TRY"
+moment_matching,cv,0.7860605921140944,sd / mean
+lognormal,mu,13.202484581394716,"sigma^2 = ln(1+CV^2), mu = ln(mean) - sigma^2/2"
+lognormal,sigma,0.6936307422073154,"sigma^2 = ln(1+CV^2), mu = ln(mean) - sigma^2/2"
+gamma,shape_k,1.6184077582552152,"k = 1/CV^2, theta = sd^2/mean"
+gamma,scale_theta,425748.29082851444,"k = 1/CV^2, theta = sd^2/mean"
+weibull,shape_c,1.2818629915705602,"shape c solves lnG(1+2/c) - 2 lnG(1+1/c) = ln(1+CV^2) (Brent, bracket (0.05, 50.0), xtol 1e-14); scale = mean/G(1+1/c)"
+weibull,scale_lambda,743891.9180098451,"shape c solves lnG(1+2/c) - 2 lnG(1+1/c) = ln(1+CV^2) (Brent, bracket (0.05, 50.0), xtol 1e-14); scale = mean/G(1+1/c)"
+invgauss,mean_mu,689034.3369407654,"IG(mu = mean, lambda = mean^3/sd^2); scipy invgauss(mu/lambda, scale=lambda)"
+invgauss,shape_lambda,1115138.5166091728,"IG(mu = mean, lambda = mean^3/sd^2); scipy invgauss(mu/lambda, scale=lambda)"
+odp_bootstrap,B,5000,England-Verrall over-dispersed Poisson bootstrap
+odp_bootstrap,process_error,True,
+odp_bootstrap,mean,734176.12651909,real TRY
+odp_bootstrap,se,2969762.3217465016,real TRY
+odp_bootstrap,phi,1902545.5438830776,ODP scale parameter
+figure10_histogram,n_draws,200000,lognormal draws
+figure10_histogram,seed,20240517,
+figure10_histogram,x_max_quantile,0.999,
+figure10_histogram,x_max_TRY,4620274.65079476,real TRY
+figure10_histogram,n_bins,60,
+figure10_histogram,draws_beyond_x_max,197,

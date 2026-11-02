@@ -1,0 +1,55 @@
+quantity,value,note
+hurdle_rate_h,0.12,target RORAC
+expense_ratio_e,0.25,
+coc_rate,0.06,cost-of-capital principle
+solvency_alpha,0.995,
+n_policies_test,295853.0,2017-2018 test policies
+expected_loss_E_S,330411599.7844212,real TRY
+sd_S,3004411.1551593635,real TRY
+aggregate_skewness,0.03804697542310459,
+z_alpha,2.5758293035489004,
+z_cornish_fisher,2.611561098964032,
+cf_skewness_term_sigma_units,0.03573179541513162,(gamma/6)(z^2 - 1)
+cf_skewness_term_share_of_capital_distance,0.013682159467494709,fraction
+capital_proxy_cornish_fisher,7846203.298107803,"q_0.995(S) - E[S], real TRY"
+capital_proxy_share_of_expected_loss,0.02374675496631202,fraction
+capital_proxy_mc_crosscheck,7102099.92960459,"compound-Poisson Monte Carlo, real TRY"
+cf_over_mc,1.1047723033861396,
+cf_above_mc_share,0.10477230338613963,fraction (manifest key cf_above_mc_pct)
+mc_replications,2000.0,
+mc_draws_above_q995,10.0,
+mc_se_bootstrap,106254.14047508,real TRY
+mc_se_bootstrap_share_of_mc_capital,0.014960946977409779,fraction
+mc_se_normal_approx,327702.93843335425,real TRY
+mc_se_normal_approx_share_of_mc_capital,0.04614169635481307,fraction
+cf_minus_mc_in_bootstrap_se,7.003052917996443,
+nb_dispersion,1.2330697849247851,variance-to-mean ratio of claim counts
+nb_dispersion_bootstrap_upper_97_5,1.23806332663316,B = 200 policy-bootstrap replicates
+capital_proxy_negbin,7986950.031821632,real TRY
+capital_proxy_negbin_over_poisson,1.0179381961397522,
+capital_proxy_negbin_param_unc,7989938.414744392,real TRY
+capital_proxy_negbin_param_unc_over_poisson,1.0183190660725363,
+capital_margin_h_times_scr,941544.3957729363,real TRY
+capital_margin_share_of_premium_poisson,0.002131135041971065,fraction
+capital_margin_share_of_premium_negbin,0.002169363760354241,fraction
+capital_margin_share_of_premium_negbin_param_unc,0.0021701754456144302,fraction
+capital_margin_share_of_premium_negbin_selfconsistent,0.0021692531899951714,fraction; premium recomputed under the NB capital
+capital_margin_share_of_premium_negbin_param_unc_selfconsistent,0.0021700624854606113,fraction
+rorac_target_premium_total,441804192.2402588,"technical (model) premium, real TRY"
+rorac_attained,0.11999999999999969,
+expected_loss_ratio_target_premium,0.747868864958029,
+realized_loss_total,328109031.66675264,"test years, real TRY"
+realized_loss_ratio_target_premium,0.6163420472871296,
+market_premium_n_valid_policies,295843.0,policies with a positive recorded premium (basis of relative loss ratios)
+premium_deflation_mean_multiplier,1.2337460725425118,mean CPI multiplier applied to recorded premiums
+sd_principle_progressivity_top_over_bottom,0.9921795524426692,
+top_over_bottom_rel_loss_ratio_market,0.9213112808444642,decile 10 / decile 1 relative loss ratio
+top_over_bottom_rel_loss_ratio_rorac_target,0.9527229659861552,decile 10 / decile 1 relative loss ratio
+severity_E_Y,4242.912736114265,real TRY
+severity_E_Y2_over_E_Y,27318.914938626247,real TRY
+severity_E_Y3_over_E_Y,3122791219.638422,real TRY^2
+level_adjustment,validation_level_then_trend,R2: expected losses on-levelled by the factor of module 14b before the premium target (Section 2.9)
+level_factor,0.8628387290648382,
+predicted_over_observed_raw,1.1670983905231465,at the 2014-2015 level
+predicted_over_observed_used,1.00701769197261,after the level adjustment
+realized_loss_ratio_target_premium,0.7426571260064521,realized test-year losses / RORAC-target premium

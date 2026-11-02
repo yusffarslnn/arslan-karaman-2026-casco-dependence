@@ -1,0 +1,50 @@
+section,quantity,value,note
+fit,n_claims,214283,claims with positive real payment
+fit,n_policy_clusters,171822,
+fit,n_parameters,16,incl. intercept
+fit,r2,0.0281626795057065,OLS on log real severity
+fit,adj_r2,0.028094644951587422,
+fit,bootstrap_B,500,"policy-cluster, percentile"
+fit,bootstrap_seed,20240517,config.GLOBAL_SEED
+vif_full_design,n_claims,1.007979133372638,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,AY2015,2.6450792837634647,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,AY2016,2.508550834683752,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,AY2017,2.449588282486662,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,AY2018,2.414844445839339,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,AY2019,1.8802872336395466,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,log_exposure,1.152062518761165,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,vehicle_age,1.4396103963174705,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,insured_age,3.407153652887844,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,horsepower,3.740689221814189,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,engine_displacement,3.0519709867799842,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,insured_vehicle_value,2.8597697963321727,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,gender_female,1.103973008383233,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,gender_corporate,3.589755601474028,"all Table A1 regressors (AY, gender, body dummies included)"
+vif_full_design,body_type_STW,suppressed,suppressed: body-type dummy identified by fewer than 10 claims/policies
+vif_reduced_numeric_design,n_claims,1.0051166004683632,count + log exposure + 5 numeric covariates only (reduced design)
+vif_reduced_numeric_design,log_exposure,1.0155779785764165,count + log exposure + 5 numeric covariates only (reduced design)
+vif_reduced_numeric_design,vehicle_age,1.3251536603711846,count + log exposure + 5 numeric covariates only (reduced design)
+vif_reduced_numeric_design,insured_age,1.0553172731565679,count + log exposure + 5 numeric covariates only (reduced design)
+vif_reduced_numeric_design,horsepower,3.707070575332804,count + log exposure + 5 numeric covariates only (reduced design)
+vif_reduced_numeric_design,engine_displacement,2.9277058836770036,count + log exposure + 5 numeric covariates only (reduced design)
+vif_reduced_numeric_design,insured_vehicle_value,2.4674145135156103,count + log exposure + 5 numeric covariates only (reduced design)
+pearson_corr_policy_level,value_hp,0.6966015560718801,"818,789 policies"
+pearson_corr_policy_level,value_cc,0.5297089682835967,"818,789 policies"
+pearson_corr_policy_level,hp_cc,0.7752311852412196,"818,789 policies"
+pearson_corr_claim_level,value_hp,0.7124339463803013,"214,283 severity claims"
+pearson_corr_claim_level,value_cc,0.5610298685501128,"214,283 severity claims"
+pearson_corr_claim_level,hp_cc,0.7893897323675418,"214,283 severity claims"
+sensitivity_drop_body_type_dummy,beta_N,-0.04357655471549125,"point estimate, same design otherwise"
+sensitivity_drop_body_type_dummy,r2,suppressed,suppressed (statistical disclosure control)
+sensitivity_drop_body_type_dummy,n,214283,"point estimate, same design otherwise"
+sensitivity_exclude_zero_exposure_claims,beta_N,-0.04362315930872571,"point estimate, same design otherwise"
+sensitivity_exclude_zero_exposure_claims,r2,0.02835389931439347,"point estimate, same design otherwise"
+sensitivity_exclude_zero_exposure_claims,n,214278,"point estimate, same design otherwise"
+sensitivity_drop_log_exposure,beta_N,-0.043573436413102656,"point estimate, same design otherwise"
+sensitivity_drop_log_exposure,r2,0.028157435007326703,"point estimate, same design otherwise"
+sensitivity_drop_log_exposure,n,214283,"point estimate, same design otherwise"
+consistency_with_06_manifest,beta_N_06,-0.04358337643157191,
+consistency_with_06_manifest,ci_06,"[-0.051474590224685646, -0.03545713439402523]",
+consistency_with_06_manifest,abs_diff_beta_N,0.0,
+consistency_with_06_manifest,abs_diff_ci,"[0.0, 0.0]",
+consistency_with_06_manifest,identical_to_06,True,

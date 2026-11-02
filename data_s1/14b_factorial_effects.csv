@@ -1,0 +1,6 @@
+contrast,definition,minuend,subtrahend,gini_minuend,gini_subtrahend,effect_point,effect_boot_mean,ci_lo,ci_hi,significant_95,B
+learner_direct,"Learner effect, direct structure: Tweedie GBM - Tweedie GLM",Tweedie GBM,Tweedie GLM,0.25633865248623466,0.24608918512462222,0.010249467361612447,0.01025267569050352,0.006931105318087746,0.013558677587960899,True,500
+learner_twostage,"Learner effect, two-stage structure: two-stage GBM - two-stage GLM",Two-stage GBM,Two-stage GLM,0.2551225137256822,0.25279359000833407,0.002328923717348108,0.0023157432985953263,-0.0018649824615542218,0.00648276407396991,False,500
+structure_GLM,"Structure effect, GLM learner: two-stage GLM - Tweedie GLM",Two-stage GLM,Tweedie GLM,0.25279359000833407,0.24608918512462222,0.006704404883711851,0.006760851486112752,0.005009251812894015,0.008496414644576199,True,500
+structure_GBM,"Structure effect, GBM learner: two-stage GBM - Tweedie GBM",Two-stage GBM,Tweedie GBM,0.2551225137256822,0.25633865248623466,-0.0012161387605524876,-0.0011760809057954412,-0.003795268150279849,0.001455620719676948,False,500
+interaction,Learner x structure interaction: (two-stage GBM - two-stage GLM) - (Tweedie GBM - Tweedie GLM),learner_twostage,learner_direct,,,-0.007920543644264338,-0.007936932391908192,-0.010862135535137995,-0.005060685975933804,True,500

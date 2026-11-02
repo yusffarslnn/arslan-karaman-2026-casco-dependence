@@ -1,0 +1,43 @@
+quantity,value,note
+fit_years,2014;2015,"fit years of ALL models (GLMs and boosted models) on the same 356,846 policies (R2: no subsample for the boosted models)"
+validation_years,2016,"early stopping, Tweedie power selection, selection of the model carried forward, recalibration map"
+test_years,2017;2018,all reported test metrics; never used for any choice
+glm_refit_years,2014;2015;2016,train-window sensitivity only (GLMs refitted on these years; 14b_train_window_sensitivity.csv); no reported model uses this window
+n_policies_fit,356846,
+n_policies_validation,166090,
+n_policies_test,295853,
+n_policies_glm_refit,522936,train-window sensitivity only
+covariate_scaling,"numeric covariates standardised with the mean and SD of the fit years [2014, 2015] only; the same parameters are applied to the validation and test years (R1b; previously each split used its own mean/SD)",standardization rule of the numeric covariates (R1b)
+best_model,Two-stage GBM (Poi×Gam),"highest validation-year (2016) Gini among the direct, two-stage and optional-package models (model carried forward to calibration and Section 2.9); the test years are never used for selection"
+best_valid_gini,0.28649382402616413,validation-year (2016) Gini of the selected model (selection criterion)
+best_gini,0.2551225137256822,test-year (2017-2018) Gini of the selected model
+highest_test_gini_model,Tweedie GBM (numpy),"model with the highest test-year Gini; reported only, not used for selection"
+paired_bootstrap_B,500,paired bootstrap over test policies
+gbm_fixed_tweedie_power,1.5,"Tweedie GBM, LightGBM, XGBoost"
+nb_alpha_estimated,0.8721826456351037,negative binomial GLM dispersion
+tweedie_glm_p_selected,1.6,"maximizer of the 2016 profile log-likelihood (grid 1.10-1.90, step 0.05)"
+tweedie_glm_p_selected_on_grid_boundary,False,
+tweedie_glm_loglik_validation_max,-410340.6063885777,
+tweedie_glm_phi_ml_at_selected_p,177.17994138262776,
+tweedie_glm_p_alt_criterion_fit_year_phi,1.65,sensitivity criterion
+tweedie_glm_p_alt_criterion_insample_profile,1.65,sensitivity criterion
+tweedie_glm_p_pre_R1,1.9,"original submission (validation deviance, not comparable across p)"
+tweedie_glm_n_validation_positive,34367,2016 policies with positive loss
+calibration_model,Two-stage GBM (Poi×Gam),
+overall_PO_before_recalibration,1.1670983905231465,"predicted / observed, test years"
+overall_PO_after_isotonic_recalibration,1.12420928743512,
+gini_before_recalibration,0.2551225137256822,
+gini_after_isotonic_recalibration,0.2536867414027575,
+n_claimant_test_policies_loglog_slope,57695,basis of the claimant log-log slope
+recalibration_fitted_on,validation year [2016] predictions of the fit-year model,
+recalibration_n_bins,1000,isotonic (PAV) map
+recalibration_n_distinct_values_test,5094,
+tree_training_sample,"all 356,846 fit-year policies","R2: the 200,000-policy subsample of the boosted models was removed (Reviewer 1, round 2)"
+level_factor_validation_level,0.9534370877682544,realized / predicted pure premium on 2016 (no test-year information)
+level_factor_frequency_trend,0.8184964974316823,"exp(b (c_test - c_fit)); b = log-linear slope of claim frequency per policy-year, 2014-2016"
+frequency_trend_slope_log_per_year,-0.06927410375420288,
+fit_center_year,2014.550100043156,exposure-weighted
+validation_center_year,2016.0,exposure-weighted
+test_center_year,2017.44131264034,exposure-weighted
+level_factor_validation_level_then_trend,0.8628387290648382,carried forward to module 18 (Table 8; config PRICING_LEVEL_ADJUSTMENT)
+overall_PO_after_level_adjustment,1.00701769197261,"selected model, combined factor (Table 8)"

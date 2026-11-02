@@ -1,0 +1,32 @@
+quantity,value,note
+recovers_signal,True,all prespecified criteria met (evaluated on the margin-fixed dependence effect)
+recovers_signal_total_effect,True,same criteria evaluated on the total effect
+criterion_monotonic_latent,True,
+criterion_material_margin_fixed,True,|effect| > threshold at tau = 0.40
+material_margin_fixed_effect_pct,-11.454332624844406,mean over 30 replications at tau = 0.40
+material_margin_fixed_effect_mc95_low,-11.722416603806977,Monte Carlo 95% interval for the mean
+material_margin_fixed_effect_mc95_high,-11.186248645881836,Monte Carlo 95% interval for the mean
+material_margin_fixed_share_reps_exceeding,0.9666666666666667,share of the 30 replications with |effect| > threshold
+criterion_null_margin_fixed,True,|effect| < threshold at tau = 0
+null_margin_fixed_effect_pct,-0.0398787225706021,mean over 30 replications at tau = 0
+criterion_material_total,True,
+criterion_null_total,True,
+threshold_material_pct,10.0,prespecified
+threshold_null_pct,2.0,prespecified
+p_no_claim_theoretical,0.7900519706224135,P(N = 0) under the fitted negative binomial
+latent_zero_claim_threshold_z0,0.8066015876519744,claims occur only for latent Z > z0 = Phi^-1(P(N = 0))
+ratio_pop_latent_min,0.9996183659751631,"recovered/injected ratio, range over tau in {0.10, 0.25, 0.40}"
+ratio_pop_latent_max,1.0027168332174992,"recovered/injected ratio, range over tau in {0.10, 0.25, 0.40}"
+ratio_claimant_policy_min,0.4448739075073868,"recovered/injected ratio, range over tau in {0.10, 0.25, 0.40}"
+ratio_claimant_policy_max,0.4961177610855939,"recovered/injected ratio, range over tau in {0.10, 0.25, 0.40}"
+ratio_latent_min,0.5855044866159282,"recovered/injected ratio, range over tau in {0.10, 0.25, 0.40}"
+ratio_latent_max,0.6311600750329568,"recovered/injected ratio, range over tau in {0.10, 0.25, 0.40}"
+ratio_perclaim_min,0.6490437740035058,"recovered/injected ratio, range over tau in {0.10, 0.25, 0.40}"
+ratio_perclaim_max,0.6867145165586089,"recovered/injected ratio, range over tau in {0.10, 0.25, 0.40}"
+tie_ceiling_tau_b_synthetic,0.7187271910295552,"sqrt(1 - sum_k q_k^2), averaged over replications and levels"
+tie_ceiling_tau_a_synthetic,0.5165724598766529,1 - sum_k q_k^2
+tie_ceiling_tau_b_observed,0.7185562651267138,"observed portfolio, all 214568 linked claim files"
+tie_ceiling_tau_a_observed,0.5163231061528522,"observed portfolio, all 214568 linked claim files"
+design_policies_per_portfolio,200000,
+design_replications_per_level,30,
+design_max_claims_per_policy,30,

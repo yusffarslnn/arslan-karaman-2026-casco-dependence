@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+message: >-
+  If you use this code, please cite the article (preferred-citation) and,
+  where appropriate, this software release.
+type: software
+title: >-
+  Analysis code for "Frequency-Severity Dependence Diagnostics in Motor Casco
+  Insurance: From Measurement Bias to Risk-Based Premium Pricing and Claims
+  Reserving Strategies"
+version: "1.0"
+date-released: "2026-11-02"
+license: MIT
+authors:
+  - family-names: Arslan
+    given-names: Yusuf
+    orcid: "https://orcid.org/0000-0002-8615-2747"
+    affiliation: >-
+      Department of Statistics, Yildiz Technical University, Istanbul, Türkiye;
+      Türk Reasürans, Istanbul, Türkiye
+    email: yusuf.arslan1@std.yildiz.edu.tr
+  - family-names: Karaman
+    given-names: Filiz
+    orcid: "https://orcid.org/0000-0002-8491-674X"
+    affiliation: >-
+      Department of Statistics, Yildiz Technical University, Istanbul, Türkiye
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.XXXXXXX"
+    description: "Zenodo archive of this release (to be filled in after deposit)"
+keywords:
+  - frequency-severity dependence
+  - motor casco insurance
+  - copula
+  - measurement bias
+  - premium pricing
+  - claims reserving
+  - Kendall tau
+  - Solvency II
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Arslan
+      given-names: Yusuf
+      orcid: "https://orcid.org/0000-0002-8615-2747"
+    - family-names: Karaman
+      given-names: Filiz
+      orcid: "https://orcid.org/0000-0002-8491-674X"
+  title: >-
+    Frequency-Severity Dependence Diagnostics in Motor Casco Insurance: From
+    Measurement Bias to Risk-Based Premium Pricing and Claims Reserving
+    Strategies
+  journal: Mathematics
+  publisher:
+    name: MDPI
+  year: 2026
+  volume: 14
+  doi: "10.3390/mathXXXXXXXX"
+  notes: >-
+    Accepted 2 November 2026 (manuscript mathematics-4559487). Article number
+    and DOI to be filled in at publication.

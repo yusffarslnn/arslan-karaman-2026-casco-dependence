@@ -1,0 +1,22 @@
+quantity,value,note
+age_to_age_factor_0_1,1.1160485743712145,chain-ladder age-to-age factor (mack.factors; = chain_ladder.f_0_1)
+age_to_age_factor_1_2,1.002878464595547,chain-ladder age-to-age factor (mack.factors)
+age_to_age_factor_2_3,1.0013373188010932,chain-ladder age-to-age factor (mack.factors)
+age_to_age_factor_3_4,1.0008036180837694,chain-ladder age-to-age factor (mack.factors)
+age_to_age_factor_4_5,1.0000835825306915,chain-ladder age-to-age factor (mack.factors)
+age_to_age_factor_5_6,0.9997533358933269,chain-ladder age-to-age factor (mack.factors)
+mack_sigma2_0_1,720168.3715029212,Mack variance parameter (mack.sigma2)
+mack_sigma2_1_2,467.9339208551486,Mack variance parameter (mack.sigma2)
+mack_sigma2_2_3,384.0235900891717,Mack variance parameter (mack.sigma2)
+mack_sigma2_3_4,102.33083149558115,Mack variance parameter (mack.sigma2)
+mack_sigma2_4_5,17.38998342859562,Mack variance parameter (mack.sigma2)
+mack_sigma2_5_6,2.955233718196544,Mack variance parameter (mack.sigma2)
+ultimate_total,909822324.0274656,"chain-ladder ultimate, all accident years, real TRY"
+paid_to_date_total,909133289.6905248,"cumulative real paid to date (ultimate_totals.paid_only), real TRY"
+unpaid_reserve_best_estimate,689034.3369407654,"chain-ladder unpaid reserve = ultimate - paid (manifest key chain_ladder.ibnr), real TRY"
+unpaid_reserve_share_of_ultimate,0.0007573284571548553,fraction (chain_ladder.ibnr_pct)
+mack_total_se,541622.7388826004,"Mack standard error of the total reserve, real TRY"
+mack_total_se_share_of_ultimate,0.0005953060554559991,fraction (mack.total_se_pct_ultimate)
+n_policies,818789,policies in the analysis file
+n_claims_severity_sample,214283,claim files with positive cumulative real payment
+n_policies_with_linked_claim,171960,policies with at least one linked claim file

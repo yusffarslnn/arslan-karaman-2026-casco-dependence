@@ -1,0 +1,3 @@
+axis,tau_marginal,tau_within_accident_year,vuong_statistic,favored_model,reliable,tie_fraction
+lag_clean,0.018548001521238994,0.02703797271135992,-47.232636551134156,independence,False,0.9993186580363351
+FS_clean,,,-46.670690444754776,independence,False,0.9999626661937718

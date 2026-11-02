@@ -1,0 +1,33 @@
+id,quantity,pipeline_value,independent_value,abs_diff,rel_diff,tolerance,tolerance_kind,pass,pipeline_source,note
+V1a,policies,818789.0,818789,0.0,0.0,0.0,abs,True,03_manifest.counts,
+V1b,claims in severity sample (real paid > 0),214283.0,214283,0.0,0.0,0.0,abs,True,03_manifest.counts,
+V1c,total real paid (TRY),909133289.6905248,909133289.6905248,0.0,0.0,1e-09,rel,True,03_manifest.ultimate_totals.paid_only,
+V1d,open case reserves at valuation (TRY),9435709.584860837,9435709.584860839,1.862645149230957e-09,1.9740382347285102e-16,1e-09,rel,True,22_manifest.incurred_CL.case_reserve_at_valuation,
+V1e,open claim files at valuation,201.0,201,0.0,0.0,0.0,abs,True,22_manifest.open_files_at_valuation.files,
+V2a,sum of pricing target over all policies (TRY),918568999.2753857,918568999.2753857,0.0,0.0,1e-09,rel,True,analytical_dataset.ultimate_rbns,independent: policy map of real paid + open reserves at valuation
+V2b,max |policy-level difference| of the target (TRY),0.0,0.0,0.0,,0.001,abs,True,analytical_dataset.ultimate_rbns,
+V2c,test-year target total in 14b parquet (TRY),328109031.66675264,328109031.66675264,0.0,0.0,1e-09,rel,True,pricing_best_preds.pp_true,
+V3a,tau_FS (claim-level Kendall tau_b),-0.006545983762776549,-0.00654598376277655,-8.673617379884035e-19,1.3250288565037668e-16,1e-10,abs,True,06_manifest.axis_tau.FS_freq_severity,independent concordance counting by count class
+V3b,tau_FS via scipy on the rebuilt table,-0.006545983762776549,-0.006545983762776549,0.0,-0.0,1e-10,abs,True,06_manifest.axis_tau.FS_freq_severity,
+V4a,tau_FS cluster-bootstrap CI lower,-0.00979589228422127,-0.009928308175445705,-0.00013241589122443484,0.013517491554875883,0.0015,abs,True,06_manifest.axis_FS_bca_ci[0],"simple percentile, B=200; 06: BCa, B=500"
+V4b,tau_FS cluster-bootstrap CI upper,-0.0035097581182701497,-0.003757440596009289,-0.0002476824777391394,0.0705696715821586,0.0015,abs,True,06_manifest.axis_FS_bca_ci[1],
+V4c,tau_FS cluster-bootstrap SE,0.0016036056545793676,0.0016654356089400289,6.182995436066125e-05,0.0385568323384838,0.0005,abs,True,implied from 06 CI half-width / 1.96,
+V5a,paid CL ultimate total (TRY),909822324.0274656,909822324.0274656,0.0,0.0,1e-10,rel,True,03_manifest.chain_ladder.ultimate_total,
+V5b,paid CL reserve / IBNR (TRY),689034.3369407654,689034.3369405717,-1.9371509552001953e-07,-2.8113997392364025e-13,1e-08,rel,True,03_manifest.chain_ladder.ibnr,
+V5c,paid Mack total s.e. (TRY),541622.7388826004,541622.7388826163,1.5832483768463135e-08,2.923157140914445e-14,1e-08,rel,True,03_manifest.mack.total_se,
+V5d,paid first development factor f(0->1),1.1160485743712145,1.1160485743712145,0.0,0.0,1e-12,abs,True,03_manifest.chain_ladder.f_0_1,
+V5e,incurred CL ultimate total (TRY),916456132.0445913,916456132.0445913,0.0,0.0,1e-10,rel,True,22_manifest.incurred_CL.ultimate,
+V5f,incurred CL outstanding = ultimate - paid to date (TRY),7322842.354066394,7322842.354066491,9.685754776000977e-08,1.3226769480599907e-14,1e-08,rel,True,22_manifest.incurred_CL.outstanding,
+V5g,incurred Mack total s.e. (TRY),560913.547301839,560913.5473019142,7.520429790019989e-08,1.340746684795811e-13,1e-08,rel,True,22_manifest.incurred_CL.mack_total_se,
+V6a,Poisson GLM test Gini,0.1796207841957524,0.1796207841957524,0.0,0.0,0.0002,abs,True,14b_manifest.models,statsmodels IRLS vs in-house IRLS
+V6b,NegBin GLM test Gini,0.1810762289389886,0.18107623027481495,1.335826366188897e-09,7.377149248226211e-09,0.0002,abs,True,14b_manifest.models,alpha fixed at 14b estimate 0.8722
+V6c,Two-stage GLM (Poisson x Gamma) test Gini,0.25279359000833407,0.25279359829144077,8.283106700535114e-09,3.2766284541716575e-08,0.0002,abs,True,14b_manifest.models,
+V6d,Tweedie GLM (p=1.6) test Gini,0.24608918512462222,0.24608918502851823,-9.610398588044688e-11,-3.905250278746658e-10,0.0002,abs,True,14b_manifest.models,
+V7a,selected model (Two-stage GBM (Poi×Gam)) test Gini,0.2551225137256822,0.25513508780144684,1.2574075764659742e-05,4.928642157461605e-05,0.001,abs,True,14b_manifest.best_gini,trapezoid Lorenz area vs 14b rank-sum formula (discretisation differs at O(1/n))
+V8a,dependent arm: simulated claim-level tau_b at rho*,-0.006545983762776549,-0.005558445909309131,0.0009875378534674184,-0.1508616411612582,0.003,abs,True,13: tau_dependence (calibration target),"independent simulator, 2,000,000 policies, no margin correction; 13 model A check: -0.00575"
+V8b,independent arm: simulated claim-level tau_b,0.0,0.0011339631848397533,0.0011339631848397533,,0.008285261962211795,abs,True,design (must be 0),MC s.e. ~ 0.0028
+V8c,VaR99.5 change dependent vs independent (%) — CI contains 0,0.0,"[-0.207274, 0.0166971]",,,0.0,contains,True,"13: +0.0075% [-0.034, +0.030]","independent simulator point -0.1304%, E[S] change -0.0004%, R=4000 x 100,000 policies"
+V8d,|VaR99.5 change| far below the 5% materiality level (tolerance 0.5%),0.007543454209435474,0.13038710810095033,0.12284365389151486,16.284801429278914,0.5,abs,True,13_manifest.scr_bias_pct,"independent simulator MC 95% half-width ~0.112 pp; the residual level reflects G_hat estimation noise (KS D of corrected V in manifest), not dependence"
+V9a,2017-12 open files,6135.0,6135,0.0,0.0,0.0,abs,True,22_manifest.case_reserve_runoff,
+V9b,2017-12 paid-subsequently / case-reserve ratio,0.49809431782585156,0.49809431782585156,0.0,0.0,1e-09,abs,True,22_manifest.case_reserve_runoff,
+V10a,selected model overall P/O (raw level),1.1670983905231465,1.1670983905231465,0.0,0.0,1e-09,abs,True,14b_manifest.calibration.overall_PO,
