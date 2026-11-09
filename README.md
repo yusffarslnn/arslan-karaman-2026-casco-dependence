@@ -2,7 +2,7 @@
 
 This repository contains the complete analysis pipeline behind the article
 
-> Arslan, Y.; Karaman, F. **Frequency–Severity Dependence Diagnostics in Motor Casco Insurance: From Measurement Bias to Risk-Based Premium Pricing and Claims Reserving Strategies.** *Mathematics* **2026**, *14*, article number to be assigned. https://doi.org/10.3390/mathXXXXXXXX (MDPI; accepted 2 November 2026; manuscript mathematics-4559487).
+> Arslan, Y.; Karaman, F. **Frequency–Severity Dependence Diagnostics in Motor Casco Insurance: From Measurement Bias to Risk-Based Premium Pricing and Claims Reserving Strategies.** *Mathematics* **2026**, *14*(21), 4104. https://doi.org/10.3390/math14214104 (MDPI; published 9 November 2026; manuscript mathematics-4559487).
 
 It is the code deposit announced in the article's Data Availability Statement. Release `v1.0-mathematics-4559487` is the exact code that produced every number, table and figure of the published version. The archived release carries a persistent identifier: Zenodo DOI https://doi.org/10.5281/zenodo.23894833 (this version) and https://doi.org/10.5281/zenodo.23894832 (all versions).
 

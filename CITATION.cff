@@ -54,7 +54,11 @@ preferred-citation:
     name: MDPI
   year: 2026
   volume: 14
-  doi: "10.3390/mathXXXXXXXX"
+  issue: 21
+  start: 4104
+  month: 11
+  doi: "10.3390/math14214104"
+  url: "https://www.mdpi.com/2227-7390/14/21/4104"
   notes: >-
-    Accepted 2 November 2026 (manuscript mathematics-4559487). Article number
-    and DOI to be filled in at publication.
+    Article number 4104; published 9 November 2026 (manuscript
+    mathematics-4559487).
